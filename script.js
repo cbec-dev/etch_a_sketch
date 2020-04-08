@@ -39,7 +39,7 @@ function generateGridItem() {
     gridItem.classList.add('grid-item');
 
     let gridItemInitialStyles = `
-        border: lightGray;
+        border: lightGray 1px solid;
         height:'100%';
         width: 100%`
 

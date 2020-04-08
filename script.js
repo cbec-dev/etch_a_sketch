@@ -26,8 +26,8 @@ function generateGridContainer(rows, cols) {
         flex-direction: column;
         border: 5px solid black;
         margin: auto;
-        width: 60vw;
-        height: 60vw;`
+        width: 75vmin;
+        height: 75vmin;`
 
     gridContainer.style = gridContainerStyles;
 

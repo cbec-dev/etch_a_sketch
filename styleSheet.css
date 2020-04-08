@@ -1,0 +1,12 @@
+body {
+    font-family: 'Roboto';
+}
+
+.header {
+    text-align: center;
+    padding: 5px;
+}
+
+.grid-wrapper {
+    text-align: center;
+}

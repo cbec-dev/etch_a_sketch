@@ -41,11 +41,21 @@ function generateGridItem() {
     let gridItemInitialStyles = `
         border: lightGray 1px solid;
         height:'100%';
-        width: 100%`
+        width: 100%;
+        background-color: hsl(0, 0%, 100%);
+        filter: brightness(1);`
 
     gridItem.style = gridItemInitialStyles;
 
-    gridItem.addEventListener('mouseover', () => gridItem.style.backgroundColor = 'black' );
+    // To black out the squares I used the filter attribute
+    // to diminish the brightness value.
+    gridItem.addEventListener('mouseover', () => {
+        let brightness = getComputedStyle(gridItem).filter;
+        var regExp = /^brightness\(([^)]+)\)/;
+        value = regExp.exec(brightness)[1]
+        if (value==0) return;
+        else gridItem.style.filter = brightness.replace(value, (value-0.1));
+    });
 
     return gridItem;
 }
